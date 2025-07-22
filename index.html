@@ -4,24 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fashion Nest</title>
+    <!--Linking Css Files-->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!--Linking ggl fonts --- Roboto --- merriweather -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="header-content">
           <div class="logo">
-            <a href="/">Fashion Nest</a>
+            <a class="logo-name" href="/">Fashion Nest</a>
           </div>
           <nav class="navigation">
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/shop">Shop</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/contact">Contact</a></li>
+            <ul class="navigation-list">
+              <li><a class="navigation-item" href="/">Home</a></li>
+              <li><a class="navigation-item" href="/shop">Shop</a></li>
+              <li><a class="navigation-item" href="/about">About Us</a></li>
+              <li><a class="navigation-item" href="/contact">Contact</a></li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-infos-cont">
+            <div class="hero-infos">
+              <div class="hero-titles-cont">
+                <h2 class="hero-sec-title">Your Unique Style Starts Here</h2>
+                <h1 class="hero-title">
+                  Elevate Your <span class="bold-span">Style</span> to New
+                  Heights
+                </h1>
+              </div>
+
+              <p class="hero-desc">
+                Discover the latest trends in fashion. Shop our exclusive
+                collection of high-quality outfits that express your unique
+                style, whether you prefer casual wear or elegant ensembles!
+              </p>
+            </div>
+            <div class="hero-buttons">
+              <button class="cta-btn">shop now</button>
+              <button class="info-btn">read more</button>
+            </div>
+          </div>
+          <div class="hero-img-cont">
+            <img src="images/smiling-autumn-girl.png" alt="" class="hero-img" />
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

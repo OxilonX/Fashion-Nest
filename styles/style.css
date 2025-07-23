@@ -78,11 +78,12 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
-  gap: 50px;
+  gap: 10px;
   max-height: calc(100vh+100px);
   padding-top: 100px;
   overflow: hidden;
 }
+
 .hero-infos-cont {
   display: flex;
   flex-direction: column;
@@ -133,7 +134,7 @@ body {
 .hero-buttons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 .cta-btn {
   width: fit-content;
@@ -151,13 +152,14 @@ body {
 }
 .info-btn {
   width: fit-content;
-  padding: 10px 20px;
+  padding: 8px 18px;
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: capitalize;
+  border: 2px solid var(--accent-color);
   border-radius: 5px;
-  background-color: var(--bg-sec-color);
-  color: var(--sec-color);
+  background-color: transparent;
+  color: var(--accent-color);
   cursor: pointer;
 }
 .info-btn:hover {
@@ -166,11 +168,172 @@ body {
 .hero-img-cont {
   max-width: 600px;
 }
+
 .hero-img {
   width: 100%;
   object-fit: cover;
-  transform: scale(1.3);
+  transform: scale(1.45);
+  cursor: pointer;
 }
+/*HERO styling end*/
+/*SBCTG styling start*/
+.sbctg {
+  background-color: var(--primary-color);
+  padding: 50px 0;
+}
+.sbctg-content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.sbctg-customer-benefit-parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sbctg-customer-benefit-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sbctg-customer-benefit-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+.sbctg-customer-benefit-title {
+  font-size: 1rem;
+}
+.sbctg-customer-benefit-sec-title {
+  font-size: 0.6rem;
+  opacity: 0.7;
+}
+.sbctg-customer-benefit-icon {
+  width: 35px;
+}
+.sbctg-parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 300px;
+  overflow: hidden;
+  gap: 15px;
+}
+
+.sbctg-side-parent {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+}
+.sbctg-side-parent .sbctg-side-child:first-child {
+  background: linear-gradient(350deg, #b3e0b3, #d1f0d1);
+}
+.sbctg-side-parent .sbctg-side-child:last-child {
+  background: linear-gradient(350deg, #bb8ab4, #fac8eb);
+}
+.sbctg-child {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background: linear-gradient(350deg, #a3c1e0, #d1e6f0);
+}
+.sbctg-side-child {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.sbctg-child-info {
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.sbctg-side-child-info {
+  position: absolute;
+  right: 20%;
+  top: 30%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sbctg-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.sbctg-sec-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--sec-color);
+  opacity: 0.7;
+}
+.sbctg-side-sec-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--sec-color);
+  opacity: 0.7;
+}
+.sbctg-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--sec-color);
+}
+.sbctg-side-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--sec-color);
+}
+.sbctg-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: fit-content;
+  border-radius: 4px;
+  padding: 6px 10px;
+  color: var(--primary-color);
+  background-color: var(--sec-color);
+  cursor: pointer;
+}
+.sbctg-btn:hover {
+  background-color: var(--accent-sec-color);
+}
+.sbctg-side-btn {
+  font-size: 0.7rem;
+  font-weight: 600;
+  width: fit-content;
+  border-radius: 2px;
+  padding: 5px 9px;
+  color: var(--primary-color);
+  background-color: var(--sec-color);
+  cursor: pointer;
+}
+.sbctg-side-btn:hover {
+  background-color: var(--accent-sec-color);
+}
+.sbctg-img-container {
+  position: absolute;
+  bottom: -60%;
+  left: 0;
+  max-width: 150px;
+}
+.sbctg-main-img-container {
+  position: absolute;
+  bottom: -40%;
+  right: -20%;
+  max-width: 400px;
+}
+.sbctg-img {
+  width: 100%;
+}
+
 /*MEDIA querries start*/
 @media (max-width: 1200px) {
   .container {

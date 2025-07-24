@@ -215,7 +215,7 @@ body {
 .sbctg-parent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 300px;
+  grid-template-rows: 350px;
   overflow: hidden;
   gap: 15px;
 }
@@ -320,13 +320,13 @@ body {
 }
 .sbctg-img-container {
   position: absolute;
-  bottom: -60%;
+  bottom: -35%;
   left: 0;
   max-width: 150px;
 }
 .sbctg-main-img-container {
   position: absolute;
-  bottom: -40%;
+  bottom: -25%;
   right: -20%;
   max-width: 400px;
 }

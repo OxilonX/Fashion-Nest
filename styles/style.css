@@ -7,6 +7,7 @@
   --bg-sec-color: #e0e0e0;
   --hover-color: #b0b0b0;
 }
+/*global styling start*/
 * {
   padding: 0;
   margin: 0;
@@ -18,6 +19,7 @@
   color: var(--sec-color);
   font-family: "Roboto", sans-serif;
   transition: 0.3s ease;
+  scroll-behavior: smooth;
   /* font-family: "Merriweather", serif;*/
 }
 a {
@@ -31,7 +33,25 @@ body {
   margin: 0 auto;
   max-width: 1200px;
 }
-/*Header styling START*/
+
+.scroll-anim {
+  animation: appearOnScroll linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
+}
+@keyframes appearOnScroll {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/*GLOBAL styling end*/
+
+/*HEADER styling start*/
 .header {
   position: absolute;
   top: 0;
@@ -334,27 +354,23 @@ body {
 .sbctg-img {
   width: 100%;
 }
-
 /*MEDIA querries start*/
 @media (max-width: 1200px) {
   .container {
     width: 95%;
   }
 }
-
 @media (max-width: 992px) {
   .container {
     width: 95%;
   }
 }
-
 @media (max-width: 768px) {
   .container {
     width: 100%;
     padding: 0 10px;
   }
 }
-
 @media (max-width: 576px) {
   .container {
     width: 100%;

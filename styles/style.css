@@ -79,7 +79,7 @@ body {
   grid-template-columns: 2fr 1fr;
   align-items: center;
   gap: 10px;
-  max-height: calc(100vh+100px);
+  max-height: 105vh;
   padding-top: 100px;
   overflow: hidden;
 }
@@ -179,7 +179,8 @@ body {
 /*SBCTG styling start*/
 .sbctg {
   background-color: var(--primary-color);
-  padding: 50px 0;
+  padding: 50px 0 0;
+  height: 100vh;
 }
 .sbctg-content {
   display: flex;

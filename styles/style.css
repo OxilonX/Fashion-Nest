@@ -354,6 +354,129 @@ body {
 .sbctg-img {
   width: 100%;
 }
+/*SBCTG styling end*/
+
+/*FTRPROD styling start*/
+.ftr-prod {
+  position: relative;
+  min-height: 100vh;
+}
+.ftr-prod-sect-title-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.ftr-prod-sect-title {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 50px 0 120px;
+  cursor: pointer;
+}
+.ftr-prod-sect-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background-color: var(--sec-color);
+  cursor: pointer;
+  transition: width 0.3s ease;
+}
+.ftr-prod-sect-title:hover.ftr-prod-sect-title::after {
+  width: 10%;
+}
+.ftr-prod-parent {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  gap: 20px;
+  scrollbar-width: none;
+  padding: 0 60px;
+}
+
+.ftr-prod-parent::-webkit-scrollbar {
+  display: none;
+}
+.ftr-prod-pagination-arrows {
+  position: absolute;
+  display: flex;
+  top: 20%;
+  right: 60px;
+  gap: 5px;
+}
+.pagination-icon {
+  width: 40px;
+  cursor: pointer;
+}
+.pagination-icon:hover {
+  scale: 1.05;
+}
+.ftr-prod-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ftr-prod-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ftr-prod-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ftr-prod-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--sec-color);
+}
+.ftr-prod-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--sec-color);
+  opacity: 0.8;
+  max-width: 90%;
+}
+.ftr-prod-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.ftr-prod-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--accent-sec-color);
+  color: var(--primary-color);
+  padding: 7px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.ftr-prod-btn:hover {
+  background-color: var(--accent-color);
+}
+.ftr-prod-price {
+  font-size: 1rem;
+  font-weight: 550;
+}
+.ftr-prod-img-cont {
+  width: 350px;
+  height: 450px;
+  object-fit: cover;
+}
+.ftr-prod-img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
 /*MEDIA querries start*/
 @media (max-width: 1200px) {
   .container {

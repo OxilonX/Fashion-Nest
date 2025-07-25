@@ -360,6 +360,7 @@ body {
 .ftr-prod {
   position: relative;
   min-height: 100vh;
+  margin-bottom: 100px;
 }
 .ftr-prod-sect-title-container {
   position: relative;
@@ -372,7 +373,7 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: capitalize;
-  margin: 50px 0 120px;
+  margin: 80px 0;
   cursor: pointer;
 }
 .ftr-prod-sect-title::after {
@@ -402,20 +403,6 @@ body {
 
 .ftr-prod-parent::-webkit-scrollbar {
   display: none;
-}
-.ftr-prod-pagination-arrows {
-  position: absolute;
-  display: flex;
-  top: 20%;
-  right: 60px;
-  gap: 5px;
-}
-.pagination-icon {
-  width: 40px;
-  cursor: pointer;
-}
-.pagination-icon:hover {
-  scale: 1.05;
 }
 .ftr-prod-child {
   display: flex;
@@ -481,19 +468,35 @@ body {
 
 /*REVIEWES styling start*/
 .reviews {
-  min-height: 100vh;
+  margin: 100px 0;
   background-color: var(--sec-color);
+  box-shadow: 0 0 20px rgb(7, 7, 7, 0.3);
+  z-index: 4;
 }
 .reviews-content {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
-  min-height: 100vh;
+  height: fit-content;
+  padding: 100px 0;
 }
 .reviews-left {
+  height: 100%;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+}
+.reviews-left-content {
+  position: sticky;
+  top: 0;
+  scrollbar-width: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 100px 0;
   gap: 30px;
 }
 .reviews-left-info {
@@ -538,47 +541,60 @@ body {
 }
 .reviews-right {
   position: relative;
+  display: flex;
 }
 .reviews-right-parent {
-  position: absolute;
-  top: 25%;
   display: flex;
   flex-direction: column;
-  height: 50vh;
+  justify-content: flex-start;
+  margin: 100px 0;
+
   max-width: 500px;
-  width: 100%;
-  background-color: var(--primary-color);
+  background-color: transparent;
   border-radius: 10px;
-  overflow-y: auto;
 }
 .reviews-right-child {
-  height: 100%;
   position: sticky;
   top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
+  justify-content: flex-start;
   scrollbar-width: none;
-  background-color: var(--primary-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-  padding: 50px 0;
+  background: var(--bg-color);
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 1);
+  height: 100%;
+  gap: 30px;
+  overflow-y: auto;
+  padding: 100px 50px;
+  border-radius: 10px;
 }
 .reviews-right-child:nth-child(1) {
-  top: 0px;
+  top: 50px;
+  transform: rotate(2deg);
+  background: linear-gradient(135deg, #3e2a47, #6f4d7a); /* Purple to Pink */
 }
 .reviews-right-child:nth-child(2) {
-  top: 20px;
+  top: 60px;
+  transform: rotate(-5deg);
+
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Dark Blue to Teal */
 }
 .reviews-right-child:nth-child(3) {
-  top: 40px;
+  top: 80px;
+  transform: rotate(5deg);
+
+  background: linear-gradient(135deg, #4b6cb7, #182848); /* Blue to Dark Blue */
 }
 .reviews-right-child:nth-child(4) {
-  top: 60px;
+  top: 100px;
+  transform: rotate(-4deg);
+
+  background: linear-gradient(135deg, #bd4f00, #96054b); /* Orange to Pink */
 }
 .reviews-right-child:nth-child(5) {
-  top: 100px;
+  top: 120px;
+  background: linear-gradient(135deg, #bf5f47, #6b4c34); /* Coral to Peach */
 }
 .reviews-right-parent::-webkit-scrollbar {
   display: none;
@@ -586,16 +602,24 @@ body {
 .reviewer-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 30px;
-  padding: 0 30px;
 }
 .reviewer-opinion {
-  color: var(--sec-color);
+  font-size: 1rem;
+  text-align: center;
+  color: var(--primary-color);
 }
 .reviewer-name {
-  color: var(--sec-color);
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+.reviewer-icon-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 .reviewer-icon {
   object-fit: cover;
@@ -606,10 +630,12 @@ body {
 .reviewer-stars {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 .star-icon,
 .half-star-icon {
-  width: 1rem;
+  width: 20px;
 }
 /*MEDIA querries start*/
 @media (max-width: 1200px) {

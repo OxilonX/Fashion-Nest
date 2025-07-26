@@ -395,10 +395,10 @@ body {
   position: relative;
   display: flex;
   align-items: flex-start;
-  overflow-x: auto;
   gap: 20px;
   scrollbar-width: none;
   padding: 0 60px;
+  overflow-x: scroll;
 }
 
 .ftr-prod-parent::-webkit-scrollbar {
@@ -409,6 +409,20 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+}
+.ftr-prod-pagination-arrows {
+  position: absolute;
+  display: flex;
+  top: 20%;
+  right: 60px;
+  gap: 5px;
+}
+.pagination-icon {
+  width: 40px;
+  cursor: pointer;
+}
+.pagination-icon:hover {
+  scale: 1.05;
 }
 
 .ftr-prod-info {
@@ -572,29 +586,30 @@ body {
 .reviews-right-child:nth-child(1) {
   top: 50px;
   transform: rotate(2deg);
-  background: linear-gradient(135deg, #3e2a47, #6f4d7a); /* Purple to Pink */
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
 }
+
 .reviews-right-child:nth-child(2) {
   top: 60px;
   transform: rotate(-5deg);
-
-  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Dark Blue to Teal */
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
 }
+
 .reviews-right-child:nth-child(3) {
   top: 80px;
   transform: rotate(5deg);
-
-  background: linear-gradient(135deg, #4b6cb7, #182848); /* Blue to Dark Blue */
+  background: linear-gradient(135deg, #ffffff, #d0d0d0);
 }
+
 .reviews-right-child:nth-child(4) {
   top: 100px;
   transform: rotate(-4deg);
-
-  background: linear-gradient(135deg, #bd4f00, #96054b); /* Orange to Pink */
+  background: linear-gradient(135deg, #ffffff, #c0c0c0);
 }
+
 .reviews-right-child:nth-child(5) {
   top: 120px;
-  background: linear-gradient(135deg, #bf5f47, #6b4c34); /* Coral to Peach */
+  background: linear-gradient(135deg, #ffffff, #b0b0b0);
 }
 .reviews-right-parent::-webkit-scrollbar {
   display: none;
@@ -609,10 +624,10 @@ body {
 .reviewer-opinion {
   font-size: 1rem;
   text-align: center;
-  color: var(--primary-color);
+  color: var(--sec-color);
 }
 .reviewer-name {
-  color: var(--primary-color);
+  color: var(--sec-color);
   font-size: 0.8rem;
 }
 .reviewer-icon-cont {
@@ -637,6 +652,8 @@ body {
 .half-star-icon {
   width: 20px;
 }
+/*REVIEWES styling start*/
+
 /*MEDIA querries start*/
 @media (max-width: 1200px) {
   .container {

@@ -777,7 +777,7 @@ body {
   top: 1.5px;
   width: 2px;
   height: 6px;
-  border: solid white;
+  border: solid rgb(255, 255, 255);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }

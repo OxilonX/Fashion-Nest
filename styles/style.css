@@ -586,30 +586,29 @@ body {
 .reviews-right-child:nth-child(1) {
   top: 50px;
   transform: rotate(2deg);
-  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  background: linear-gradient(135deg, #3e2a47, #6f4d7a);
 }
-
 .reviews-right-child:nth-child(2) {
   top: 60px;
   transform: rotate(-5deg);
-  background: linear-gradient(135deg, #ffffff, #e0e0e0);
-}
 
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
 .reviews-right-child:nth-child(3) {
   top: 80px;
   transform: rotate(5deg);
-  background: linear-gradient(135deg, #ffffff, #d0d0d0);
-}
 
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+}
 .reviews-right-child:nth-child(4) {
   top: 100px;
   transform: rotate(-4deg);
-  background: linear-gradient(135deg, #ffffff, #c0c0c0);
-}
 
+  background: linear-gradient(135deg, #bd4f00, #96054b);
+}
 .reviews-right-child:nth-child(5) {
   top: 120px;
-  background: linear-gradient(135deg, #ffffff, #b0b0b0);
+  background: linear-gradient(135deg, #bf5f47, #6b4c34);
 }
 .reviews-right-parent::-webkit-scrollbar {
   display: none;
@@ -624,10 +623,10 @@ body {
 .reviewer-opinion {
   font-size: 1rem;
   text-align: center;
-  color: var(--sec-color);
+  color: var(--primary-color);
 }
 .reviewer-name {
-  color: var(--sec-color);
+  color: var(--bg-sec-color);
   font-size: 0.8rem;
 }
 .reviewer-icon-cont {

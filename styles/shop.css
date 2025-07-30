@@ -8,16 +8,28 @@
   --bg-sec-color: #e0e0e0;
   --hover-color: #b0b0b0;
 }
-/*view options styling start*/
+/*SHOPPARENT tyling start*/
+.shop-parent {
+  display: flex;
+  flex-direction: column;
+}
+/*VIEWOPTIONS styling start*/
+.header-shop {
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+  z-index: 1;
+}
+
 .product-view-controls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .sorting-options-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: flex-end;
+  gap: 50px;
 }
 .product-view-controls {
   display: flex;
@@ -27,37 +39,6 @@
   margin: 20px 0;
 }
 
-.view-options {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.view-grid,
-.view-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--accent-color);
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.view-icon {
-  width: 20px;
-}
-.view-icon.active {
-  filter: invert(100%);
-}
-.view-grid:hover,
-.view-list:hover {
-  opacity: 0.8;
-}
-.view-grid.active,
-.view-list.active {
-  opacity: 0.6;
-}
 .sorting-options-container {
   display: flex;
   align-items: center;
@@ -94,4 +75,69 @@
 }
 .sorting-options-container select:focus {
   outline: none;
+}
+/*VIEWOPTIONS styling end*/
+
+/*SHOPPRODUCTS GRID styling start*/
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+}
+.shop-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 5px 5px 0 0;
+}
+.shp-child-image-container {
+  max-width: 200px;
+  object-fit: cover;
+}
+.shp-child-img {
+  width: 100%;
+}
+.shp-child-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.shp-child-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--sec-color);
+}
+.shp-child-desc {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--sec-color);
+  opacity: 0.7;
+}
+.shp-child-prices {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.shp-child-price {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--sec-color);
+}
+.shp-child-discount {
+  position: relative;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(254, 76, 76);
+}
+.shp-child-discount::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  transform: rotate(60deg);
+  background-color: rgb(210, 63, 63);
+  width: 100%;
+  height: 1px;
 }

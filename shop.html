@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header-shop">
       <div class="container">
         <div class="header-content">
           <div class="logo">
@@ -34,165 +34,168 @@
       </div>
     </header>
     <main>
-      <img src="icons/icons8-delivery-30.png" alt="" class="img-popo" />
-      <div class="shop-parent">
-        <div class="shop-view-controls">
-          <div class="view-options">
-            <button title="grid view" class="view-grid">
-              <img class="view-icon" src="icons/icons8-grid-48.png" alt="" />
-            </button>
-            <button title="list view" class="view-list">
-              <img class="view-icon" src="icons/icons8-list-48.png" alt="" />
-            </button>
+      <div class="container">
+        <div class="shop-parent">
+          <div class="shop-view-controls">
+            <div class="sorting-options-container">
+              <div class="list-options sort-options">
+                <label for="sort-select">sort :</label>
+                <select id="sort-select">
+                  <option value="price-asc">Economical to Expensive</option>
+                  <option value="price-desc">Expensive to Economical</option>
+                  <option value="popularity">Popularity</option>
+                  <option value="newest">Newest</option>
+                </select>
+              </div>
+              <div class="list-options show-options">
+                <label for="show-select">Show :</label>
+                <select id="show-select">
+                  <option value="18">18 product</option>
+                  <option value="36">36 product</option>
+                  <option value="72">72 product</option>
+                  <option value="144">144 product</option>
+                </select>
+              </div>
+              <div class="list-options type-options">
+                <label for="type-select">Clothing Type:</label>
+                <select id="type-select">
+                  <option value="all">All Types</option>
+                  <option value="shirts">Shirts</option>
+                  <option value="pants">Pants</option>
+                  <option value="dresses">Dresses</option>
+                  <option value="jackets">Jackets</option>
+                </select>
+              </div>
+            </div>
           </div>
-          <div class="sorting-options-container">
-            <div class="list-options sort-options">
-              <label for="sort-select">sort :</label>
-              <select id="sort-select">
-                <option value="price-asc">Economical to Expensive</option>
-                <option value="price-desc">Expensive to Economical</option>
-                <option value="popularity">Popularity</option>
-                <option value="newest">Newest</option>
-              </select>
-            </div>
-            <div class="list-options show-options">
-              <label for="show-select">Show :</label>
-              <select id="show-select">
-                <option value="15">15 product</option>
-                <option value="30">30 product</option>
-                <option value="90">90 product</option>
-                <option value="120">120 product</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <ul class="shop-grid">
-          <li class="shop-child">
-            <div class="shp-child-image-container">
-              <img src="" alt="" class="shp-child-img" />
-            </div>
-            <div class="shp-child-infos">
-              <h1 class="shp-child-name"></h1>
-              <p class="shp-child-desc"></p>
-              <div class="shp-child-prices">
-                <h4 class="shp-child-price"></h4>
-                <span class="shp-child-discount"></span>
+          <ul class="shop-grid">
+            <li class="shop-child">
+              <div class="shp-child-image-container">
+                <img src="" alt="" class="shp-child-img" />
               </div>
-            </div>
-          </li>
-          <li class="shop-child">
-            <div src="" alt="" class="shp-child-image-container">
-              <img src="" alt="" class="shp-child-img" />
-            </div>
-            <div class="shp-child-infos">
-              <h1 class="shp-child-name"></h1>
-              <p class="shp-child-desc"></p>
-              <div class="shp-child-prices">
-                <h4 class="shp-child-price"></h4>
-                <span class="shp-child-discount"></span>
+              <div class="shp-child-infos">
+                <h1 class="shp-child-name"></h1>
+                <p class="shp-child-desc"></p>
+                <div class="shp-child-prices">
+                  <h4 class="shp-child-price"></h4>
+                  <span class="shp-child-discount"></span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="shop-child">
-            <div src="" alt="" class="shp-child-image-container">
-              <img src="" alt="" class="shp-child-img" />
-            </div>
-            <div class="shp-child-infos">
-              <h1 class="shp-child-name"></h1>
-              <p class="shp-child-desc"></p>
-              <div class="shp-child-prices">
-                <h4 class="shp-child-price"></h4>
-                <span class="shp-child-discount"></span>
+            </li>
+            <li class="shop-child">
+              <div src="" alt="" class="shp-child-image-container">
+                <img src="" alt="" class="shp-child-img" />
               </div>
-            </div>
-          </li>
-          <li class="shop-child">
-            <div src="" alt="" class="shp-child-image-container">
-              <img src="" alt="" class="shp-child-img" />
-            </div>
-            <div class="shp-child-infos">
-              <h1 class="shp-child-name"></h1>
-              <p class="shp-child-desc"></p>
-              <div class="shp-child-prices">
-                <h4 class="shp-child-price"></h4>
-                <span class="shp-child-discount"></span>
+              <div class="shp-child-infos">
+                <h1 class="shp-child-name"></h1>
+                <p class="shp-child-desc"></p>
+                <div class="shp-child-prices">
+                  <h4 class="shp-child-price"></h4>
+                  <span class="shp-child-discount"></span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="shop-child">
-            <div src="" alt="" class="shp-child-image-container">
-              <img src="" alt="" class="shp-child-img" />
-            </div>
-            <div class="shp-child-infos">
-              <h1 class="shp-child-name"></h1>
-              <p class="shp-child-desc"></p>
-              <div class="shp-child-prices">
-                <h4 class="shp-child-price"></h4>
-                <span class="shp-child-discount"></span>
+            </li>
+            <li class="shop-child">
+              <div src="" alt="" class="shp-child-image-container">
+                <img src="" alt="" class="shp-child-img" />
               </div>
-            </div>
-          </li>
-          <li class="shop-child">
-            <div src="" alt="" class="shp-child-image-container">
-              <img src="" alt="" class="shp-child-img" />
-            </div>
-            <div class="shp-child-infos">
-              <h1 class="shp-child-name"></h1>
-              <p class="shp-child-desc"></p>
-              <div class="shp-child-prices">
-                <h4 class="shp-child-price"></h4>
-                <span class="shp-child-discount"></span>
+              <div class="shp-child-infos">
+                <h1 class="shp-child-name"></h1>
+                <p class="shp-child-desc"></p>
+                <div class="shp-child-prices">
+                  <h4 class="shp-child-price"></h4>
+                  <span class="shp-child-discount"></span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="shop-child">
-            <div src="" alt="" class="shp-child-image-container">
-              <img src="" alt="" class="shp-child-img" />
-            </div>
-            <div class="shp-child-infos">
-              <h1 class="shp-child-name"></h1>
-              <p class="shp-child-desc"></p>
-              <div class="shp-child-prices">
-                <h4 class="shp-child-price"></h4>
-                <span class="shp-child-discount"></span>
+            </li>
+            <li class="shop-child">
+              <div src="" alt="" class="shp-child-image-container">
+                <img src="" alt="" class="shp-child-img" />
               </div>
-            </div>
-          </li>
-          <li class="shop-child">
-            <div src="" alt="" class="shp-child-image-container">
-              <img src="" alt="" class="shp-child-img" />
-            </div>
-            <div class="shp-child-infos">
-              <h1 class="shp-child-name"></h1>
-              <p class="shp-child-desc"></p>
-              <div class="shp-child-prices">
-                <h4 class="shp-child-price"></h4>
-                <span class="shp-child-discount"></span>
+              <div class="shp-child-infos">
+                <h1 class="shp-child-name"></h1>
+                <p class="shp-child-desc"></p>
+                <div class="shp-child-prices">
+                  <h4 class="shp-child-price"></h4>
+                  <span class="shp-child-discount"></span>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="shop-child">
-            <div src="" alt="" class="shp-child-image-container">
-              <img src="" alt="" class="shp-child-img" />
-            </div>
-            <div class="shp-child-infos">
-              <h1 class="shp-child-name"></h1>
-              <p class="shp-child-desc"></p>
-              <div class="shp-child-prices">
-                <h4 class="shp-child-price"></h4>
-                <span class="shp-child-discount"></span>
+            </li>
+            <li class="shop-child">
+              <div src="" alt="" class="shp-child-image-container">
+                <img src="" alt="" class="shp-child-img" />
               </div>
-            </div>
-          </li>
-        </ul>
-        <div class="shop-pagination-container">
-          <img src="" alt="" class="shop-pagin-img" />
-          <ul class="shop-pagin-content">
-            <li class="shop-pagin-dot shop-pagin-dot-1"></li>
-            <li class="shop-pagin-dot shop-pagin-dot-2"></li>
-            <li class="shop-pagin-dot shop-pagin-dot-3"></li>
+              <div class="shp-child-infos">
+                <h1 class="shp-child-name"></h1>
+                <p class="shp-child-desc"></p>
+                <div class="shp-child-prices">
+                  <h4 class="shp-child-price"></h4>
+                  <span class="shp-child-discount"></span>
+                </div>
+              </div>
+            </li>
+            <li class="shop-child">
+              <div src="" alt="" class="shp-child-image-container">
+                <img src="" alt="" class="shp-child-img" />
+              </div>
+              <div class="shp-child-infos">
+                <h1 class="shp-child-name"></h1>
+                <p class="shp-child-desc"></p>
+                <div class="shp-child-prices">
+                  <h4 class="shp-child-price"></h4>
+                  <span class="shp-child-discount"></span>
+                </div>
+              </div>
+            </li>
+            <li class="shop-child">
+              <div src="" alt="" class="shp-child-image-container">
+                <img src="" alt="" class="shp-child-img" />
+              </div>
+              <div class="shp-child-infos">
+                <h1 class="shp-child-name"></h1>
+                <p class="shp-child-desc"></p>
+                <div class="shp-child-prices">
+                  <h4 class="shp-child-price"></h4>
+                  <span class="shp-child-discount"></span>
+                </div>
+              </div>
+            </li>
+            <li class="shop-child">
+              <div src="" alt="" class="shp-child-image-container">
+                <img src="" alt="" class="shp-child-img" />
+              </div>
+              <div class="shp-child-infos">
+                <h1 class="shp-child-name"></h1>
+                <p class="shp-child-desc"></p>
+                <div class="shp-child-prices">
+                  <h4 class="shp-child-price"></h4>
+                  <span class="shp-child-discount"></span>
+                </div>
+              </div>
+            </li>
+            <li class="shop-child">
+              <div src="" alt="" class="shp-child-image-container">
+                <img src="" alt="" class="shp-child-img" />
+              </div>
+              <div class="shp-child-infos">
+                <h1 class="shp-child-name"></h1>
+                <p class="shp-child-desc"></p>
+                <div class="shp-child-prices">
+                  <h4 class="shp-child-price"></h4>
+                  <span class="shp-child-discount"></span>
+                </div>
+              </div>
+            </li>
           </ul>
-          <img src="" alt="" class="shop-pagin-img" />
+          <div class="shop-pagination-container">
+            <img src="" alt="" class="shop-pagin-img" />
+            <ul class="shop-pagin-content">
+              <li class="shop-pagin-dot shop-pagin-dot-1"></li>
+              <li class="shop-pagin-dot shop-pagin-dot-2"></li>
+              <li class="shop-pagin-dot shop-pagin-dot-3"></li>
+            </ul>
+            <img src="" alt="" class="shop-pagin-img" />
+          </div>
         </div>
       </div>
     </main>

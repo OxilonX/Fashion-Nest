@@ -1,0 +1,97 @@
+:root {
+  --primary-color: #ffffff;
+  --sec-color: #000000;
+  --light-accent-color: #77cdfc;
+  --accent-color: #54c3ff;
+  --accent-sec-color: #39a9da;
+  --bg-color: #f7f7f7;
+  --bg-sec-color: #e0e0e0;
+  --hover-color: #b0b0b0;
+}
+/*view options styling start*/
+.product-view-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sorting-options-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.product-view-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.view-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.view-grid,
+.view-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.view-icon {
+  width: 20px;
+}
+.view-icon.active {
+  filter: invert(100%);
+}
+.view-grid:hover,
+.view-list:hover {
+  opacity: 0.8;
+}
+.view-grid.active,
+.view-list.active {
+  opacity: 0.6;
+}
+.sorting-options-container {
+  display: flex;
+  align-items: center;
+}
+.list-options {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sorting-options-container label {
+  font-weight: 500;
+  font-size: 0.8rem;
+  opacity: 0.4;
+  text-transform: capitalize;
+}
+.sorting-options-container select {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  transition: border-color 0.3s;
+  width: auto;
+  white-space: nowrap;
+}
+
+.sorting-options-container select:hover {
+  border-color: var(--accent-color);
+}
+
+.sorting-options-container option {
+  background-color: var(--bg-color);
+  color: var(--sec-color);
+  border: none;
+}
+.sorting-options-container select:focus {
+  outline: none;
+}

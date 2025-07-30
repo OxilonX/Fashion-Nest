@@ -8,6 +8,7 @@
   --bg-sec-color: #e0e0e0;
   --hover-color: #b0b0b0;
 }
+
 /*global styling start*/
 * {
   padding: 0;
@@ -28,6 +29,12 @@ a {
 }
 body {
   background-color: var(--primary-color);
+}
+.prod-img-container {
+  max-width: 100px;
+}
+.prod-img {
+  width: 100%;
 }
 .container {
   width: 90%;
@@ -89,6 +96,7 @@ body {
 .navigation-item:hover {
   color: var(--accent-sec-color);
 }
+
 /*HEADER styling end*/
 
 /*HERO styling start*/
@@ -405,6 +413,7 @@ body {
 .ftr-prod-parent::-webkit-scrollbar {
   display: none;
 }
+
 .ftr-prod-child {
   display: flex;
   flex-direction: column;
@@ -800,7 +809,8 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
-  gap: 5px;
+  column-gap: 5px;
+  row-gap: 40px;
 }
 .footer-section {
   display: flex;
@@ -840,7 +850,7 @@ body {
   height: 1px;
   background-color: var(--sec-color);
   border-radius: 5px;
-  margin: 5em 0 1em;
+  margin: 5.5em 0 1em;
 }
 .footer-bottom {
   display: flex;
@@ -866,6 +876,18 @@ body {
   font-weight: 400;
   color: var(--sec-color);
   opacity: 0.9;
+}
+
+.footer-email,
+.footer-phone {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--sec-color);
+  transition: 0.5s ease-in;
+}
+.footer-email:hover,
+.footer-phone:hover {
+  color: var(--accent-sec-color);
 }
 /*MEDIA querries start*/
 @media (max-width: 1200px) {

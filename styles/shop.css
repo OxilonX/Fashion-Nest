@@ -87,7 +87,7 @@
 .shop-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 10px;
+  column-gap: 20px;
   row-gap: 30px;
   align-items: start;
 }
@@ -100,7 +100,6 @@
 }
 .shp-child-image-container {
   position: relative;
-  width: 260px;
   height: 350px;
   object-fit: cover;
 }
@@ -129,27 +128,41 @@
   opacity: 0;
   cursor: pointer;
 }
-.info-icon-overlay:hover {
+.info-icon-overlay:hover,
+.fav-icon-overlay:hover {
   filter: invert(1);
+}
+.fav-icon-overlay {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  width: 30px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 3;
 }
 .shp-child-btn-overlay {
   position: absolute;
   top: 50%;
-  left: 34%;
+  left: 29%;
   padding: 10px 20px;
   font-size: 0.8rem;
   font-weight: 600;
+  text-transform: capitalize;
   border-radius: 20px;
   background-color: var(--sec-color);
   color: var(--primary-color);
   opacity: 0;
-
   cursor: pointer;
 }
 
 .shp-child-image-container:hover .shp-child-btn-overlay,
-.shp-child-image-container:hover .info-icon-overlay {
+.shp-child-image-container:hover .info-icon-overlay,
+.shp-child-image-container:hover .fav-icon-overlay {
   opacity: 1;
+}
+.shp-child-image-container:hover .shp-child-discount-overlay {
+  opacity: 0;
 }
 .shp-child-btn-overlay:hover {
   background-color: var(--primary-color);

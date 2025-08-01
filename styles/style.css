@@ -30,6 +30,16 @@ a {
 body {
   background-color: var(--primary-color);
 }
+main {
+  min-height: 100vh;
+}
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--sec-color);
+  padding: 30px 0;
+}
 .prod-img-container {
   max-width: 100px;
 }

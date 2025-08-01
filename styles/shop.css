@@ -8,19 +8,23 @@
   --bg-sec-color: #e0e0e0;
   --hover-color: #b0b0b0;
 }
+* {
+  transition: 0.3s ease-in;
+}
 /*SHOPPARENT tyling start*/
 .shop-parent {
   display: flex;
   flex-direction: column;
+  gap: 80px;
+  padding: 50px 0 100px;
 }
 /*VIEWOPTIONS styling start*/
 .header-shop {
   position: relative;
-  padding: 20px 0;
+  padding: 30px 0;
   width: 100%;
   z-index: 1;
 }
-
 .product-view-controls {
   display: flex;
   align-items: center;
@@ -62,6 +66,7 @@
   transition: border-color 0.3s;
   width: auto;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .sorting-options-container select:hover {
@@ -79,12 +84,16 @@
 /*VIEWOPTIONS styling end*/
 
 /*SHOP PRODUCTS GRID styling start*/
+.shop-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 .shop-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
   row-gap: 30px;
-
   align-items: start;
 }
 .shop-child {
@@ -95,6 +104,7 @@
   border-radius: 5px 5px 0 0;
 }
 .shp-child-image-container {
+  position: relative;
   width: 260px;
   height: 350px;
   object-fit: cover;
@@ -103,6 +113,52 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.shp-child-discount-overlay {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 7px 10px;
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+}
+.info-icon-overlay {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  width: 30px;
+  opacity: 0;
+  cursor: pointer;
+}
+.info-icon-overlay:hover {
+  filter: invert(1);
+}
+.shp-child-btn-overlay {
+  position: absolute;
+  top: 50%;
+  left: 34%;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: var(--sec-color);
+  color: var(--primary-color);
+  opacity: 0;
+
+  cursor: pointer;
+}
+
+.shp-child-image-container:hover .shp-child-btn-overlay,
+.shp-child-image-container:hover .info-icon-overlay {
+  opacity: 1;
+}
+.shp-child-btn-overlay:hover {
+  background-color: var(--primary-color);
+  color: var(--sec-color);
 }
 .shp-child-infos {
   display: flex;
@@ -160,7 +216,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 .shop-pagin-content {
   display: flex;
@@ -168,15 +224,16 @@
   gap: 10px;
 }
 .shop-pagin-img {
-  width: 20px;
+  width: 22px;
+  opacity: 0.7;
   cursor: pointer;
 }
 .shop-pagin-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 .shop-pagin-dot {
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background-color: rgb(214, 214, 214);
   box-shadow: 0px 0px 2px rgb(0, 0, 0, 0.4);
@@ -184,3 +241,25 @@
 .shop-pagin-dot.active {
   background-color: rgb(169, 169, 169);
 }
+/*SHOP PAGINATION styling end*/
+
+/*FOOTER SHOP styling start*/
+.footer-shop {
+  background-color: var(--sec-color);
+  padding: 5.1em 0 1.5em;
+}
+.footer-item-title-shop,
+.footer-item-shop a,
+.footer-phone-shop,
+.footer-email-shop,
+.footer-social-icon-shop,
+.footer-rights-shop,
+.footer-divider-shop {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+.footer-divider-shop {
+  background-color: var(--primary-color);
+}
+/*FOOTER SHOP styling end*/

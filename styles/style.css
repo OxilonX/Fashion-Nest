@@ -63,14 +63,16 @@ body {
 .header {
   position: absolute;
   top: 0;
-  padding: 20px 0;
+  padding: 30px 0;
   width: 100%;
   z-index: 1;
 }
 .header-content {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  justify-content: space-b;
   gap: 5px;
 }
 .logo-name {
@@ -82,21 +84,39 @@ body {
   user-select: text;
 }
 .navigation-list {
-  justify-self: end;
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: end;
+  gap: 20px;
 }
 .navigation-item {
-  font-size: 1rem;
-  font-weight: 450;
-  cursor: pointer;
+  width: 24px;
   user-select: text;
+  cursor: pointer;
 }
 .navigation-item:hover {
-  color: var(--accent-sec-color);
+  opacity: 0.7;
 }
-
+.input-field-container {
+  position: relative;
+  display: none;
+}
+.input-field-icon {
+  position: absolute;
+  bottom: 20%;
+  right: 5%;
+  width: 16px;
+}
+.search-field {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--sec-color);
+  border-bottom: 1.5px solid var(--sec-color);
+  border-radius: 10px;
+  padding: 6px;
+  max-width: 150px;
+  box-shadow: 0 0px 10px rgb(0, 0, 0, 0.3);
+}
 /*HEADER styling end*/
 
 /*HERO styling start*/
@@ -793,7 +813,7 @@ body {
 /*FOOTER styling start*/
 .footer {
   background-color: var(--primary-color);
-  padding: 5em 0 1.5em;
+  padding: 5.1em 0 1.5em;
 }
 .footer-content {
   display: flex;
@@ -830,11 +850,8 @@ body {
   font-size: 1.1rem;
   font-weight: 800;
   color: var(--sec-color);
-  cursor: pointer;
 }
-.footer-item-title:hover {
-  opacity: 0.8;
-}
+
 .footer-item a {
   font-size: 0.8rem;
   font-weight: 500;
@@ -883,6 +900,7 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--sec-color);
+  opacity: 0.7;
   transition: 0.5s ease-in;
 }
 .footer-email:hover,

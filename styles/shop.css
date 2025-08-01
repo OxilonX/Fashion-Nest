@@ -19,12 +19,7 @@
   padding: 50px 0 100px;
 }
 /*VIEWOPTIONS styling start*/
-.header-shop {
-  position: relative;
-  padding: 30px 0;
-  width: 100%;
-  z-index: 1;
-}
+
 .product-view-controls {
   display: flex;
   align-items: center;
@@ -244,22 +239,22 @@
 /*SHOP PAGINATION styling end*/
 
 /*FOOTER SHOP styling start*/
-.footer-shop {
+.footer-dark {
   background-color: var(--sec-color);
   padding: 5.1em 0 1.5em;
 }
-.footer-item-title-shop,
-.footer-item-shop a,
-.footer-phone-shop,
-.footer-email-shop,
-.footer-social-icon-shop,
-.footer-rights-shop,
-.footer-divider-shop {
+.footer-item-title-dark,
+.footer-item-dark a,
+.footer-phone-dark,
+.footer-email-dark,
+.footer-social-icon-dark,
+.footer-rights-dark,
+.footer-divider-dark {
   color: var(--primary-color);
   fill: var(--primary-color);
 }
 
-.footer-divider-shop {
+.footer-divider-dark {
   background-color: var(--primary-color);
 }
 /*FOOTER SHOP styling end*/

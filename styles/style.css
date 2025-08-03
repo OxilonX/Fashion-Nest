@@ -444,6 +444,7 @@ main {
   scrollbar-width: none;
   padding: 0 60px;
   overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
 .ftr-prod-parent::-webkit-scrollbar {

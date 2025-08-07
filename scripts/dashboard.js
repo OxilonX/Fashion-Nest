@@ -1,33 +1,38 @@
-const submit = document.getElementById("submit");
-const prodName = document.getElementById("product-name");
-const prodDesc = document.getElementById("product-description");
-const prodPrice = document.getElementById("product-price");
-const prodImg = document.getElementById("product-image");
-let products = [];
-let product = {
-  name: "",
-  desc: "",
-  price: "",
-  source: "",
-};
-if (submit) {
-  submit.addEventListener("click", (event) => {
-    event.preventDefault();
-    if (prodName && prodDesc && prodPrice && prodImg.files.length > 0) {
-      product.name = prodName.value;
-      product.desc = prodDesc.value;
-      product.price = prodPrice.value;
-      product.source = prodImg.src;
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        product.source = e.target.result;
-        products.push(product);
-        console.log(products);
-      };
+class Product {
+  constructor(name, desc, price, source) {
+    this.name = name;
+    this.desc = desc;
+    this.price = price;
+    this.source = source;
+    this.id = this.generateUniqueId();
+  }
 
-      reader.readAsDataURL(prodImg.files[0]);
-    }
-  });
+  generateUniqueId() {
+    return `id-${Math.random().toString(36).substr(2, 9)}`;
+  }
+  addProduct(products) {
+    products.push(this);
+  }
 }
+const products = [];
+const submit = document.getElementById("submit");
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  const prodName = document.getElementById("product-name").value;
+  const prodDesc = document.getElementById("product-description").value;
+  const prodPrice = document.getElementById("product-price").value;
+  const prodImg = document.getElementById("product-image");
 
-export { products };
+  if (prodImg.files.length > 0) {
+    const file = prodImg.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      const dataUrl = e.target.result;
+      const product = new Product(prodName, prodDesc, prodPrice, dataUrl);
+      product.addProduct(products);
+      localStorage.setItem("products", JSON.stringify(products));
+    };
+    reader.readAsDataURL(file);
+  }
+});
